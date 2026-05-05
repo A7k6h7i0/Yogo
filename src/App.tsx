@@ -1,16 +1,16 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import Breathwork from './components/Breathwork';
-import Stick from './components/Stick';
-import Capsules from './components/Capsules';
+import Scale from './components/Scale';
+import Services from './components/Services';
+import TechStack from './components/TechStack';
+import Process from './components/Process';
+import Projects from './components/Projects';
+import Experts from './components/Experts';
 import AppShowcase from './components/AppShowcase';
-import Instructors from './components/Instructors';
 import Testimonials from './components/Testimonials';
-import Philosophy from './components/Philosophy';
-import Chakras from './components/Chakras';
-import Journey from './components/Journey';
-import AsanaGallery from './components/AsanaGallery';
+import Approach from './components/Approach';
+import Infrastructure from './components/Infrastructure';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 function App() {
@@ -22,9 +22,9 @@ function App() {
   });
 
   return (
-    <div className="bg-black min-h-screen text-white font-sans selection:bg-white/30 selection:text-white">
+    <div className="bg-black min-h-screen text-white font-sans selection:bg-blue-500/30 selection:text-white">
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-[#7A98FF] origin-left z-[100]"
+        className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-[100]"
         style={{ scaleX }}
       />
       
@@ -32,21 +32,21 @@ function App() {
       
       <main>
         <Hero />
-        <Breathwork />
-        <Philosophy />
-        <Chakras />
-        <Journey />
-        <Stick />
-        <Capsules />
-        <AsanaGallery />
-        <Instructors />
+        <Scale />
+        <Approach />
+        <TechStack />
+        <Process />
+        <Infrastructure />
+        <Services />
+        <Projects />
+        <Experts />
         <AppShowcase />
         <Testimonials />
       </main>
 
       <footer className="bg-black text-white/40 py-12 text-center text-sm border-t border-white/10 mt-32">
         <div className="container mx-auto px-6">
-          <p>© {new Date().getFullYear()} Yoga Concept. Educational purposes only.</p>
+          <p>© {new Date().getFullYear()} TechNova IT Solutions. All rights reserved.</p>
         </div>
       </footer>
     </div>
