@@ -1,10 +1,16 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import WaterStickVideo from './components/WaterStickVideo';
+import Breathwork from './components/Breathwork';
 import Stick from './components/Stick';
 import Capsules from './components/Capsules';
 import AppShowcase from './components/AppShowcase';
+import Instructors from './components/Instructors';
+import Testimonials from './components/Testimonials';
+import Philosophy from './components/Philosophy';
+import Chakras from './components/Chakras';
+import Journey from './components/Journey';
+import AsanaGallery from './components/AsanaGallery';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 function App() {
@@ -26,15 +32,21 @@ function App() {
       
       <main>
         <Hero />
-        <WaterStickVideo />
+        <Breathwork />
+        <Philosophy />
+        <Chakras />
+        <Journey />
         <Stick />
         <Capsules />
+        <AsanaGallery />
+        <Instructors />
         <AppShowcase />
+        <Testimonials />
       </main>
 
       <footer className="bg-black text-white/40 py-12 text-center text-sm border-t border-white/10 mt-32">
         <div className="container mx-auto px-6">
-          <p>© {new Date().getFullYear()} Sofi Clone. Educational purposes only.</p>
+          <p>© {new Date().getFullYear()} Yoga Concept. Educational purposes only.</p>
         </div>
       </footer>
     </div>

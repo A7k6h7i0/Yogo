@@ -13,33 +13,33 @@ const Capsules = () => {
 
   const capsules = [
     {
-      name: "valerian",
-      latin: "lat.// valeriana officinalis",
-      desc: "relax",
-      target: "sleep",
-      impact: "≈51%",
-      image: "https://www.sofihealth.com/_next/image?url=%2Fimages%2Fformulations%2Fvalerian.webp&w=256&q=75",
-      bg: "bg-[#1C1F2B]"
+      name: "dhyana",
+      latin: "path // meditation",
+      desc: "stillness",
+      target: "awareness",
+      impact: "inner peace",
+      image: "/images/yoga_class_1_1777978522870.png",
+      bg: "bg-[#0A0B10]"
     },
     {
-      name: "passiflora",
-      latin: "lat.// passiflora incarnata",
-      desc: "rest",
-      target: "calm + sleep",
-      impact: "2.1x",
-      impactLabel: "sleep improv.",
-      image: "https://www.sofihealth.com/_next/image?url=%2Fimages%2Fformulations%2Fpassiflora.webp&w=256&q=75",
-      bg: "bg-[#252321]"
+      name: "asana",
+      latin: "path // posture",
+      desc: "flow",
+      target: "alignment",
+      impact: "flexibility",
+      impactLabel: "physical state:",
+      image: "/images/yoga_class_2_1777978648328.png",
+      bg: "bg-[#110D0A]"
     },
     {
-      name: "ashwagandha",
-      latin: "lat.// withania somnifera",
-      desc: "balance",
-      target: "calm",
-      impact: ">95%",
-      impactLabel: "confidence:",
-      image: "https://www.sofihealth.com/_next/image?url=%2Fimages%2Fformulations%2Fashwagandha.webp&w=256&q=75",
-      bg: "bg-[#1E2721]"
+      name: "pranayama",
+      latin: "path // breath",
+      desc: "energy",
+      target: "vitality",
+      impact: "prana flow",
+      impactLabel: "life force:",
+      image: "/images/yoga_class_3_1777978663348.png",
+      bg: "bg-[#0A110D]"
     }
   ];
 
@@ -52,9 +52,9 @@ const Capsules = () => {
           <div className="overflow-hidden mb-12">
             <motion.h2 
               style={{ x: titleX }}
-              className="text-6xl md:text-8xl lg:text-[10rem] font-medium tracking-tighter whitespace-nowrap"
+              className="text-6xl md:text-8xl lg:text-[10rem] font-light italic tracking-tighter whitespace-nowrap text-black/90"
             >
-              nature’s magic
+              sacred practices
             </motion.h2>
           </div>
           
@@ -68,30 +68,30 @@ const Capsules = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <p className="text-2xl font-medium">sofi capsules //</p>
+              <p className="text-2xl font-medium uppercase tracking-widest">Yoga Paths //</p>
             </div>
-            <div className="flex flex-col gap-6 text-lg md:text-xl text-black/70 leading-relaxed">
-              <p>we have two types of natural formulations. plant remedies you spray to swallow, where impact is felt within 10 days. and functional fragrances that you spray like a perfume, activating instantly to boost your mood.</p>
-              <p>we reviewed hundreds of papers to select the best plants known for their scientific + therapeutic potential to naturally improve sleep & calm.</p>
-              <p>and we work closely with herbalists, conservationists & botanic gardens to ensure the quality and sustainability of all our plants.</p>
+            <div className="flex flex-col gap-6 text-lg md:text-xl text-black/70 font-light leading-relaxed">
+              <p>we embrace the eight limbs of yoga. from the ethical precepts to the physical postures, and ultimately, the states of profound meditative absorption.</p>
+              <p>each path is designed to cultivate a harmonious connection between your mind, body, and the universe. the practices adapt to your unique spiritual needs.</p>
+              <p>our master yogis guide you through sequences that unlock your physical potential while simultaneously grounding your mental state.</p>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-          <h2 className="text-5xl md:text-7xl font-medium tracking-tighter border-black">sofi capsules</h2>
-          <p className="max-w-md text-black/70 mt-6 md:mt-0">we add new plants to our range of formulations every season. to try them ahead of general release, sign up for our pioneer program. you can find out more here.</p>
+          <h2 className="text-5xl md:text-7xl font-light italic tracking-tighter border-black">explore the limbs</h2>
+          <p className="max-w-md text-black/70 mt-6 md:mt-0 font-light">discover the foundational pillars of our practice. designed for practitioners at every stage of their spiritual and physical journey.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {capsules.map((capsule, idx) => (
             <motion.article 
               key={capsule.name}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 1, delay: idx * 0.15, type: "spring", bounce: 0.3 }}
-              className={`relative rounded-3xl p-8 h-[600px] flex flex-col justify-between overflow-hidden group hover:shadow-2xl transition-all duration-500`}
+              transition={{ duration: 1.2, delay: idx * 0.2, type: "spring", bounce: 0.4 }}
+              className={`relative rounded-3xl p-8 h-[600px] flex flex-col justify-between overflow-hidden group hover:shadow-2xl transition-all duration-700 hover:-translate-y-4`}
             >
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${capsule.bg}`}></div>
               

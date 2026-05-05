@@ -14,9 +14,10 @@ const AppShowcase = () => {
   // The screens container will translate horizontally
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   
-  // Scale and opacity for the intro text
+  // Scale and opacity for the intro text with a unique 3D rotation
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const textScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
+  const textScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.5]);
+  const textRotateX = useTransform(scrollYProgress, [0, 0.2], [0, 45]);
 
   return (
     <section ref={containerRef} className="bg-black text-white relative h-[300vh]">
@@ -25,14 +26,14 @@ const AppShowcase = () => {
         
         {/* Intro Text */}
         <motion.div 
-          style={{ opacity: textOpacity, scale: textScale }}
+          style={{ opacity: textOpacity, scale: textScale, rotateX: textRotateX }}
           className="absolute top-1/4 left-0 right-0 z-20 text-center px-6"
         >
-          <h2 className="text-4xl md:text-7xl font-medium tracking-tighter leading-tight max-w-4xl mx-auto">
-            we work to identify your unique responses to our plant formulations
+          <h2 className="text-4xl md:text-7xl font-light tracking-widest uppercase leading-tight max-w-4xl mx-auto">
+            a digital sanctuary for your practice
           </h2>
-          <p className="mt-8 text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-            this means we work together to help you discover the formulations that uniquely work for you...
+          <p className="mt-8 text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed">
+            we've created an experience that transcends the screen, guiding you towards profound inner stillness and absolute awareness...
           </p>
         </motion.div>
 
@@ -51,10 +52,10 @@ const AppShowcase = () => {
               alt="iPhone Mockup" 
               className="w-full h-auto relative z-20 drop-shadow-2xl"
             />
-            <div className="absolute top-[2%] left-[4.5%] right-[4.5%] bottom-[2%] overflow-hidden rounded-[2.5rem] z-10 bg-[#161928]">
+            <div className="absolute top-[2%] left-[4.5%] right-[4.5%] bottom-[2%] overflow-hidden rounded-[2.5rem] z-10 bg-[#161928] group-hover:scale-105 transition-transform duration-700">
               <img 
-                src="https://www.sofihealth.com/_next/static/media/app_bubbles_no_mockup.6cc97de2.webp" 
-                alt="Sofi App Screen" 
+                src="/images/yoga_app_1777977964088.png" 
+                alt="Yoga App Screen" 
                 className="w-full h-full object-cover opacity-80"
               />
             </div>
@@ -67,11 +68,11 @@ const AppShowcase = () => {
               alt="iPhone Mockup" 
               className="w-full h-auto relative z-20 drop-shadow-2xl"
             />
-            <div className="absolute top-[2%] left-[4.5%] right-[4.5%] bottom-[2%] overflow-hidden rounded-[2.5rem] z-10 bg-[#080B17] flex flex-col justify-between p-6">
+            <div className="absolute top-[2%] left-[4.5%] right-[4.5%] bottom-[2%] overflow-hidden rounded-[2.5rem] z-10 bg-[#080B17] flex flex-col justify-between p-6 group-hover:scale-105 transition-transform duration-700">
                <div className="text-center mt-12">
-                 <img src="https://www.sofihealth.com/_next/static/media/passiflora_for_app.9cec5911.webp" alt="Passiflora" className="w-48 mx-auto" />
-                 <h3 className="text-2xl mt-8 font-medium">sofi measures</h3>
-                 <p className="text-[#848DAE] mt-4 text-sm">sleep improv. 2.1x</p>
+                 <img src="/images/yoga_class_2_1777978648328.png" alt="Yoga Flow" className="w-48 mx-auto rounded-full shadow-[0_0_40px_rgba(255,255,255,0.1)]" />
+                 <h3 className="text-2xl mt-8 font-light italic text-white/90">asana mastery</h3>
+                 <p className="text-[#848DAE] mt-4 font-light text-sm uppercase tracking-widest">flexibility unlocked</p>
                </div>
             </div>
           </div>
@@ -83,8 +84,8 @@ const AppShowcase = () => {
               alt="iPhone Mockup" 
               className="w-full h-auto relative z-20 drop-shadow-2xl"
             />
-            <div className="absolute top-[2%] left-[4.5%] right-[4.5%] bottom-[2%] overflow-hidden rounded-[2.5rem] z-10 bg-gradient-to-b from-[#161928] to-[#080B17] flex flex-col items-center justify-center">
-              <h3 className="text-3xl font-medium text-center px-4">your discoveries</h3>
+            <div className="absolute top-[2%] left-[4.5%] right-[4.5%] bottom-[2%] overflow-hidden rounded-[2.5rem] z-10 bg-gradient-to-b from-[#161928] to-[#080B17] flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-700">
+              <h3 className="text-3xl font-light italic text-center px-4">your spiritual journey</h3>
             </div>
           </div>
 
