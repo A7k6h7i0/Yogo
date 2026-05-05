@@ -23,9 +23,9 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10 w-full max-w-5xl">
         <motion.div style={{ y: textY }} className="flex flex-col items-center text-center">
-          <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-bold tracking-tighter flex mb-8">
+          <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-bold tracking-tighter flex flex-wrap justify-center mb-8">
             {words.map((word, i) => (
-              <span key={word.text} className={word.className}>
+              <span key={word.text} className={`${word.className} whitespace-nowrap`}>
                 {word.text.split('').map((char, j) => (
                   <motion.span
                     key={`${word.text}-${j}`}
